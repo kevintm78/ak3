@@ -1,0 +1,6 @@
+## default.prop additions to overide values of build.prop
+wlan.wfd.hdcp=disable 
+ro.securestorage.support=false
+ro.config.knox=0
+ro.config.tima=0
+ro.build.selinux=optional

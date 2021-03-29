@@ -37,6 +37,12 @@ set_perm_recursive 0 0 750 750 $ramdisk/init* $ramdisk/sbin;
 ## AnyKernel install
 dump_boot;
 
+# begin ramdisk changes
+
+### default.prop
+backup_file default.prop;
+append_file default.prop persist.sys.usb.config default-mods;
+
 # end ramdisk changes
 
 write_boot;
