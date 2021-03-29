@@ -41,6 +41,10 @@ dump_boot;
 
 ### default.prop
 backup_file default.prop;
+#patch_prop default.prop ro.secure 0;
+#patch_prop default.prop ro.debuggable 1;
+#patch_prop default.prop ro.adb.secure 0;
+patch_prop default.prop persist.sys.usb.config mtp,adb;
 append_file default.prop persist.sys.usb.config default-mods;
 
 # end ramdisk changes
