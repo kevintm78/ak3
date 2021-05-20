@@ -6,8 +6,8 @@
 properties() { '
 kernel.string=trltevzw_kernel
 do.devicecheck=1
-do.modules=1
-do.systemless=1
+do.modules=0
+do.systemless=0
 do.cleanup=1
 do.cleanuponabort=0
 device.name1=trlte
@@ -41,11 +41,10 @@ dump_boot;
 
 ### default.prop
 backup_file default.prop;
-#patch_prop default.prop ro.secure 0;
-#patch_prop default.prop ro.debuggable 1;
-#patch_prop default.prop ro.adb.secure 0;
+patch_prop default.prop ro.secure 0;
+patch_prop default.prop ro.debuggable 1;
+patch_prop default.prop ro.adb.secure 0;
 patch_prop default.prop persist.sys.usb.config mtp,adb;
-append_file default.prop persist.sys.usb.config default-mods;
 
 # end ramdisk changes
 
